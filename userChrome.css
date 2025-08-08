@@ -1,0 +1,72 @@
+/* userChrome.css - minimal styles for pinned PiP UI */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.tab.sine-pip-attached,
+.tab[sine-pip-attached] {
+  /* increase tab height to make room for preview */
+  min-height: 140px !important;
+  padding-bottom: 8px !important;
+  transition: min-height 200ms ease;
+}
+
+/* container appended into the tab element */
+.sine-pip-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 8px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  -moz-appearance: none;
+  box-sizing: border-box;
+  width: calc(100% - 16px);
+  overflow: hidden;
+}
+
+/* favicon */
+.sine-pip-favicon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--toolbar-field-focus-background);
+}
+
+/* metadata */
+.sine-pip-meta {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.sine-pip-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--toolbar-field-text-color);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.sine-pip-source {
+  font-size: 11px;
+  color: var(--toolbar-field-secondary-text-color);
+  opacity: 0.9;
+}
+
+/* controls */
+.sine-pip-controls {
+  display: flex;
+  gap: 6px;
+}
+.sine-pip-controls button {
+  -moz-appearance: none;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.02);
+  color: var(--toolbar-field-text-color);
+}
