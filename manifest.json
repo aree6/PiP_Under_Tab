@@ -1,11 +1,14 @@
 {
   "manifest_version": 1,
-  "name": "PiP Under Tab in Sidebar",
-  "description": "Shows a mini YouTube player directly under the tab that’s playing media in Zen Browser’s sidebar.",
+  "name": "PiP in Tab Sidebar",
   "version": "1.0.0",
   "author": "AI",
-  "main": "mod.js",
-  "styles": [
-    "style.css"
+  "description": "Moves Picture-in-Picture video into the corresponding tab in Zen's sidebar instead of floating.",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["mod.js"],
+      "css": ["styles.css"]
+    }
   ]
 }
