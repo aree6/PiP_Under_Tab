@@ -1,0 +1,10 @@
+{
+  "name": "Pinned PiP in Sidebar",
+  "id": "pinned-pip-sidebar",
+  "version": "0.1.0",
+  "title": "Pinned PiP (Sidebar)",
+  "author": "Areeb",
+  "description": "Place a pinned PiP-like preview & controls inside the sidebar tab for playing media.",
+  "files": ["sine.uc.mjs", "userChrome.css"],
+  "compatibility": { "zen-browser": true }
+}
